@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Music Player</title>
+<!-- Load FontAwesome icons -->
+<link rel="stylesheet"
+		href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="audio-player">
+
+	<div class="track-details">
+	<div class="current-status">PLAYING x OF y</div>
+	<div class="track-image"></div>
+	<div class="track-title">Track Name</div>
+	<div class="track-artist">Track Artist</div>
+	</div>
+
+	<div class="control-buttons">
+	<div class="prev-button" onclick="prevTrack()">
+		<i class="fa fa-step-backward fa-2x"></i>
+	</div>
+	<div class="playpause-button" onclick="playpauseTrack()">
+		<i class="fa fa-play-circle fa-5x"></i>
+	</div>
+	<div class="next-button" onclick="nextTrack()">
+		<i class="fa fa-step-forward fa-2x"></i>
+	</div>
+	</div>
+
+	<div class="slider-container">
+	<div class="current-time">00:00</div>
+	<input type="range" min="1" max="100"
+		value="0" class="seek-slider" onchange="seekTo()">
+	<div class="total-duration">00:00</div>
+	</div>
+
+	<div class="slider-container">
+	<i class="fa fa-volume-down"></i>
+	<input type="range" min="1" max="100"
+		value="99" class="volume-slider" onchange="setVolume()">
+	<i class="fa fa-volume-up"></i>
+	</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
