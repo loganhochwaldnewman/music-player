@@ -53,6 +53,7 @@ currentTrack.src = trackList[trackIndex].path;
 currentTrack.load();
 
 // Update details of the track
+    // IF YOU DOWNLOADED YOUR IMAGE THIS CODE WILL NEED TO CHANGE
 trackImage.style.backgroundImage = 
     "url(" + trackList[trackIndex].image + ")";
 trackTitle.textContent = trackList[trackIndex].name;
@@ -67,23 +68,6 @@ updateTimer = setInterval(seekUpdate, 1000);
 // Move to the next track if the current finishes playing
 // using the 'ended' event
 currentTrack.addEventListener("ended", nextTrack);
-
-// Apply a random background color
-randomBgColor();
-}
-
-function randomBgColor() {
-// Get a random number between 64 to 256
-// (for getting lighter colors)
-let red = Math.floor(Math.random() * 256) + 64;
-let green = Math.floor(Math.random() * 256) + 64;
-let blue = Math.floor(Math.random() * 256) + 64;
-
-// Construct a color with the given values
-let bgColor = "rgb(" + red + ", " + green + ", " + blue + ")";
-
-// Set the background to the new color
-document.body.style.background = bgColor;
 }
 
 // Function to reset all values to their default
